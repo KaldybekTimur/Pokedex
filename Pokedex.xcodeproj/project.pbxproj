@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22C9DD222567E81600E772DF /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C9DD212567E81600E772DF /* Pokemon.swift */; };
 		22E5B89F25653F8C00447EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5B89E25653F8C00447EBA /* AppDelegate.swift */; };
 		22E5B8A125653F8C00447EBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5B8A025653F8C00447EBA /* SceneDelegate.swift */; };
 		22E5B8A325653F8C00447EBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E5B8A225653F8C00447EBA /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22C9DD212567E81600E772DF /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		22E5B89B25653F8C00447EBA /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E5B89E25653F8C00447EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22E5B8A025653F8C00447EBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				22E5B8A025653F8C00447EBA /* SceneDelegate.swift */,
 				22E5B8A225653F8C00447EBA /* ViewController.swift */,
 				22E5B8A425653F8C00447EBA /* Main.storyboard */,
+				22C9DD212567E81600E772DF /* Pokemon.swift */,
 				22E5B8A725653F8F00447EBA /* Assets.xcassets */,
 				22E5B8A925653F8F00447EBA /* LaunchScreen.storyboard */,
 				22E5B8AC25653F8F00447EBA /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22E5B8A325653F8C00447EBA /* ViewController.swift in Sources */,
+				22C9DD222567E81600E772DF /* Pokemon.swift in Sources */,
 				22E5B89F25653F8C00447EBA /* AppDelegate.swift in Sources */,
 				22E5B8A125653F8C00447EBA /* SceneDelegate.swift in Sources */,
 			);
