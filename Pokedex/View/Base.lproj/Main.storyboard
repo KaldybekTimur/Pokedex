@@ -34,7 +34,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Abv-ng-g0R" kind="show" id="71H-CA-gqZ"/>
+                                    <segue destination="LaK-XZ-EHD" kind="show" identifier="pokemonSegue" id="0Sj-YL-xXb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -49,30 +49,41 @@
             </objects>
             <point key="canvasLocation" x="-72" y="793"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="2t2-fR-GJf">
+        <!--Pokemon View Controller-->
+        <scene sceneID="JgI-O0-aWv">
             <objects>
-                <viewController id="Abv-ng-g0R" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="w7n-7e-Nms">
+                <viewController id="LaK-XZ-EHD" customClass="PokemonViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AQU-cO-TTT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0q-G8-Umg">
-                                <rect key="frame" x="20" y="438" width="374" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4k4-Gw-ThQ">
+                                <rect key="frame" x="20" y="389" width="374" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bulbasaur" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXb-ml-I9M">
+                                <rect key="frame" x="20" y="316" width="374" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="0Ea-G1-n37"/>
+                        <viewLayoutGuide key="safeArea" id="zIG-EH-glq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2Qf-1G-3S2"/>
+                    <navigationItem key="navigationItem" id="pdA-R3-53B"/>
+                    <connections>
+                        <outlet property="namelabel" destination="nXb-ml-I9M" id="xW7-Ac-avs"/>
+                        <outlet property="numberlabel" destination="4k4-Gw-ThQ" id="C5y-gu-R6n"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jmq-Z2-7zH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2WX-79-Za2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808.69565217391312" y="807.58928571428567"/>
+            <point key="canvasLocation" x="908.69565217391312" y="804.91071428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H72-1c-E8g">
