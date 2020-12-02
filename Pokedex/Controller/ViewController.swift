@@ -9,17 +9,34 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    let pokemon = [
-        Pokemon(name: "Bulbasaur", number: 1),
-        Pokemon(name: "Pickachu", number: 2),
-        Pokemon(name: "Raichu", number: 3),
-        Pokemon(name: "Pichu", number: 4),
-        Pokemon(name: "Meow-Meow", number: 5)
-    ]
+    var pokemon: [Pokemon] = []
+    
+    func capitalize(of text: String) -> String{
+        return text.prefix(1).uppercased() + text.dropFirst()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.reloadData() /// for updating data
+        
+        let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=151")
+        guard let u = url else {
+            return
+        }
+        URLSession.shared.dataTask(with: u) { (data, response, error) in
+            guard let data = data else {
+                return
+            }
+            do{
+            let pokemonList = try JSONDecoder().decode(PokemonList.self, from: data)
+                self.pokemon = pokemonList.results
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+            catch let error{
+                print("\(error)")
+            }
+        }.resume()
     }
     
     // MARK: - TableView protocols
@@ -29,7 +46,7 @@ class ViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "id", for: indexPath)
-        cell.textLabel?.text = pokemon[indexPath.row].name
+        cell.textLabel?.text = capitalize(of:pokemon[indexPath.row].name)
         return cell
     }
     
@@ -38,7 +55,7 @@ class ViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "pokemonSegue"{
             if let destination = segue.destination as? PokemonViewController{
-                destination.pokemon = pokemon[tableView.indexPathForSelectedRow!.row]
+                destination.current = pokemon[tableView.indexPathForSelectedRow!.row]
             }
         }
     }
